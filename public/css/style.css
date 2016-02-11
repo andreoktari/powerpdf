@@ -1,0 +1,66 @@
+.btn-daftar{
+	font-size: 25px;
+	color: #ecf0f1;
+	background-color: #2ecc71;
+}
+.btn-daftar:hover{
+	color: #ecf0f1;
+	background-color: #27ae60;
+}
+.btn-masuk{
+	font-size: 25px;
+	color: #ecf0f1;
+	background-color: #3498db;
+}
+.btn-masuk:hover{
+	color: #ecf0f1;
+	background-color: #2980b9;
+}
+
+legend
+{
+	border-color: black;
+}
+
+.navbar-atas
+{
+	background-color: #34495e;
+	border-radius: 0px;
+}
+a:hover{
+	color: #95a5a6;
+	text-decoration: none;
+}
+a{
+	color: #95a5a6;
+}
+h1,h2,h3{
+	color: #95a5a6;
+	text-align: center;
+}
+
+.foot{
+	text-align: right;
+}
+.jumbotron{
+	background-color: #34495e;
+}
+.well{
+	background-color: #95a5a6;
+}
+.tombol-keluar
+{
+	padding-top: 7%;
+}
+.tombol-keluar>i
+{
+	font-size: 17px;
+}
+.foot
+{
+	color: #95a5a6;
+}
+i
+{
+	color: silver;
+}
