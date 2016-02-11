@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selamat Datang !</title>
+	<?php echo HTML::script('js/jquery.min.js'); ?>
+
+	<?php echo HTML::script('js/bootstrap.min.js'); ?>
+
+	<?php echo HTML::style('css/bootstrap.css'); ?>
+
+    <?php echo HTML::style('css/bootstrap-theme.css'); ?>
+
+    <?php echo HTML::style('css/style.css'); ?>
+
+</head>
+<body>
+<div class="navbar navbar-atas">
+	<div class="container">
+		<div class="navbar-right">
+			<?php if(Auth::check()): ?>
+			<div class="tombol-keluar">
+				<i><?php echo ucwords(Auth::user()->nama); ?></i>&nbsp
+				<a href="logout" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span></a>
+			</div>
+			<?php else: ?>
+			<div class="navbar-brand">
+				<?php echo HTML::link('home','Home'); ?>
+
+			</div>
+			<?php echo HTML::link('reg','Daftar',array('class'=>'btn btn-daftar')); ?>
+
+			<?php echo HTML::link('login','Masuk',array('class'=>'btn btn-masuk')); ?>		
+			<?php endif; ?>
+		</div>
+	</div>
+</div>
+<div class="col-md-4"></div>
+	<div class="col-md-4">
+	<?php echo $__env->yieldContent('konten'); ?>
+	</div>
+<div class="col-md-4"></div>
+
+</body>
+</html>

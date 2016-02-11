@@ -1,0 +1,7 @@
+<?php $__env->startSection('konten'); ?>
+<div class="well">
+	<h2>Welcome! <?php echo ucwords(Auth::user()->nama); ?></h2>
+	<h3>Find Out About We !</h3>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('home.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

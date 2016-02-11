@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selamat Datang !</title>
+	<?php echo HTML::script('js/jquery.min.js'); ?>
+
+	<?php echo HTML::script('js/bootstrap.min.js'); ?>
+
+	<?php echo HTML::style('css/bootstrap.css'); ?>
+
+    <?php echo HTML::style('css/bootstrap-theme.css'); ?>
+
+    <?php echo HTML::style('css/style.css'); ?>
+
+</head>
+<body>
+<div class="jumbotron">
+	<?php if(Session::has('pesan')): ?>
+	<div class="alert alert-success">
+	<a href="#" class="close" data-dismiss="alert">&times;</a>
+	<?php echo Session::get('pesan'); ?>
+
+	</div>  
+	<?php endif; ?>
+	
+	<div class="container">
+	<h1>Kumpulan Materi Kuliah</h1><br /><br />
+	<h2>Mendaftarlah,</h2>
+	<h2>Dapatkan Materi Kuliah Yang Anda Butuhkan</h2><br /><br />
+		<div class="btn-group btn-group-justified">
+			<div class="btn-group">
+				<?php echo HTML::link('reg','Daftar',array('class'=>'btn btn-daftar')); ?>
+
+			</div>
+			<div class="btn-group">
+				<?php echo HTML::link('login','Masuk',array('class'=>'btn btn-masuk')); ?>
+
+			</div>
+		</div><br /><br /><br /><br /><br /><br />
+	<legend><h5><a href="#">Tentang</a>&nbsp&nbsp&nbsp<a href="#">Ketentuan Pengguna</a>&nbsp&nbsp&nbsp<a href="">Media sosial</a></h5></legend>
+	<div class="foot">
+		<h5>Copyright Andre Oktari</h5>
+	</div>
+	</div>
+</div>
+</body>
+</html>

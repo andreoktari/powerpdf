@@ -1,0 +1,22 @@
+<?php $__env->startSection('konten'); ?>
+<div class="jumbotron">
+	<div class="container">
+		<legend>Daftar</legend>
+		<?php echo Form::open(array('url'=>'register','method'=>'post')); ?>
+
+		<?php echo Form::text('nama','',array('class' =>'form-control','placeholder'=>'Nama Anda')); ?><br />
+		<?php echo Form::text('username','',array('class' =>'form-control','placeholder'=>'Nama Pengguna Baru')); ?><br />
+		<?php echo Form::password('password',array('class' =>'form-control','placeholder'=>'Sandi Baru')); ?><br />
+		<i>Dengan mengklik Daftar, Anda setuju dengan <a href="#"><u>Ketentuan</u></a> dan Kebijakan kami.</i><br />
+		<div class="btn-group btn-group-justified">
+			<div class="btn-group">
+				<?php echo Form::submit('Daftar',array('class' =>'btn btn-info')); ?>
+
+			</div>
+		</div>
+		<?php echo Form::close(); ?>
+
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('home.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
